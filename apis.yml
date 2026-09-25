@@ -1,23 +1,72 @@
 aid: angiodroid
+
 name: Angiodroid
-description: 'Angiodroid is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.angiodroid.com/hubfs/anteprima.png
+
+description: Angiodroid SpA is a medical technology company specializing in CO₂-based solutions for vascular surgery, interventional radiology,
+  cardiology, and angiology. It aims to improve patient outcomes by providing innovative, contrast‑free imaging technologies, reducing the risk
+  of contrast‑induced nephropathy. The company offers products such as CO₂ injectors, disposables, and synchronization tools, and emphasizes innovation,
+  passion, and quality in its mission.
+
 url: https://raw.githubusercontent.com/api-evangelist/angiodroid/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- Medical Technology
+- CO2 Imaging
+- Vascular Surgery
+- Interventional Radiology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/angiodroid-hosts.yml
+- type: Vendors
+  url: vendors/angiodroid-vendors.yml
+- type: Newsroom
+  url: https://www.angiodroid.com/newsroom
+- type: DomainSecurity
+  url: security/angiodroid-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/angiodroid
+  url: https://www.angiodroid.com
+
+apis:
+- name: Angiodroid API
+  description: API for Angiodroid services (no public contract discovered)
+  humanURL: https://www.angiodroid.com
+  baseURL: null
+  aid: angiodroid:angiodroid-api
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public API documentation or contract was found for Angiodroid.
+  evidence:
+  - url: https://api.angiodroid.com/openapi.json
+    status: 0
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
